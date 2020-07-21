@@ -16,7 +16,7 @@ Usage example:
 ```C
 /* your callback function that performs the actual AES encryption */
 void aes_cmac_encrypt(uint8_t* data) {
-  AES_ECB_encrypt(&cmac_ctx, data); // <-- this is the AES encryption function with its own logic
+  AES_ECB_encrypt(&cmac_ctx, data); // <-- this is the *external* AES encryption function with its own logic. you can use tiny-AES-c library from kokke
 }
 
 /* create AES CMAC context used to generate the CMAC */
